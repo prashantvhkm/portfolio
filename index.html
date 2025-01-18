@@ -306,16 +306,19 @@
               <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#about">About </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#photography">My Photography</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contant">Contact </a>
             </li>
           </ul>
         </div>
@@ -449,7 +452,7 @@
       </div>
     </section>
 
-    <section id="portfolio" class="container">
+    <section id="photography" class="container">
       <h2 class="section-title">My Photography</h2>
       <div class="row text-center">
         <div class="col-md-4">
@@ -480,116 +483,117 @@
       </div>
     </section>
 
-    <div class="container py-5">
-      <div class="row justify-content-center align-items-center g-4">
-        <h2 class="section-title text-center mb-4">Connect with Me</h2>
-        <div class="col-md-6 text-center">
-          <!-- Contact Details Table -->
-          <table class="table table-borderless">
-            <tbody>
-              <tr>
-                <th scope="row">Email</th>
-                <td>
-                  <a href="mailto:prashantvhkm@gmail.com"
-                    >prashantvhkm@gmail.com</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">Phone</th>
-                <td>
-                  <a href="tel:+917620171492">+91 7620171492</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <section id="contant">
+      <div class="container py-5">
+        <div class="row justify-content-center align-items-center g-4">
+          <h2 class="section-title text-center mb-4">Connect with Me</h2>
+          <div class="col-md-6 text-center">
+            <!-- Contact Details Table -->
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <th scope="row">Email</th>
+                  <td>
+                    <a href="mailto:prashantvhkm@gmail.com"
+                      >prashantvhkm@gmail.com</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Phone</th>
+                  <td>
+                    <a href="tel:+917620171492">+91 7620171492</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-          <!-- Social Links -->
-          <div class="social-links d-flex justify-content-center gap-3 my-4">
+            <!-- Social Links -->
+            <div class="social-links d-flex justify-content-center gap-3 my-4">
+              <a
+                href="https://github.com/prashantvhkm"
+                target="_blank"
+                class="social-icon github btn btn-outline-dark"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a
+                href="https://www.instagram.com/prashantvhkm"
+                target="_blank"
+                class="social-icon instagram btn btn-outline-primary"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+            </div>
+
+            <!-- Download CV Button -->
             <a
-              href="https://github.com/prashantvhkm"
-              target="_blank"
-              class="social-icon github btn btn-outline-dark"
-              aria-label="GitHub"
+              class="btn btn-primary"
+              href="prashantvhkm.pdf"
+              role="button"
+              download
+              aria-label="Download CV"
             >
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a
-              href="https://www.instagram.com/prashantvhkm"
-              target="_blank"
-              class="social-icon instagram btn btn-outline-primary"
-              aria-label="Instagram"
-            >
-              <i class="fab fa-instagram"></i> Instagram
+              Download CV
             </a>
           </div>
 
-          <!-- Download CV Button -->
-          <a
-            class="btn btn-primary"
-            href="prashantvhkm.pdf"
-            role="button"
-            download
-            aria-label="Download CV"
-          >
-            Download CV
-          </a>
-        </div>
-
-        <div class="col-md-6">
-          <form
-            name="submit-to-google-sheet"
-            onsubmit="handleFormSubmit(event)"
-            class="needs-validation"
-            novalidate
-          >
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control"
-                name="name"
-                id="name"
-                placeholder="Your Name"
-                required
-              />
-              <label for="name">Name</label>
-              <div class="invalid-feedback">Please enter your name.</div>
-            </div>
-
-            <div class="form-floating mb-3">
-              <input
-                type="email"
-                class="form-control"
-                name="email"
-                id="email"
-                placeholder="Your Email"
-                required
-              />
-              <label for="email">Email</label>
-              <div class="invalid-feedback">
-                Please enter a valid email address.
+          <div class="col-md-6">
+            <form
+              name="submit-to-google-sheet"
+              class="needs-validation"
+              novalidate
+            >
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+                <label for="name">Name</label>
+                <div class="invalid-feedback">Please enter your name.</div>
               </div>
-            </div>
 
-            <div class="form-floating mb-3">
-              <textarea
-                class="form-control"
-                name="message"
-                id="message"
-                rows="3"
-                placeholder="Your Message"
-                required
-              ></textarea>
-              <label for="message">Message</label>
-              <div class="invalid-feedback">Please enter a message.</div>
-            </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <label for="email">Email</label>
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
 
-            <button type="submit" class="btn btn-primary">Send</button>
-          </form>
-          <span id="msg"></span>
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  id="message"
+                  rows="3"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+                <label for="message">Message</label>
+                <div class="invalid-feedback">Please enter a message.</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+            <span id="msg"></span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Add Font Awesome for Icons -->
     <link
@@ -598,7 +602,7 @@
     />
 
     <!-- Footer -->
-    <footer class="text-center py-3 bg-light">
+    <footer class="text-center py-3 bg-dark">
       <p>&copy; 2025 Prashant Vishwakarma. All Rights Reserved.</p>
     </footer>
 
@@ -639,7 +643,7 @@
             msg.innerHTML = "Message sent successfully";
             setTimeout(function () {
               msg.innerHTML = "";
-            }, 5000);
+            }, 3000);
 
             form.reset();
           })

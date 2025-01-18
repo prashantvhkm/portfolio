@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+      <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Lora:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+
+      /* General Body Styling */
+      body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+      margin: 0;
+      padding: 0;
+    }
+
+      /* Hero Section */
+      .hero {
+        background-color: #007bff;
+        color: #fff;
+        padding: 80px 0;
+        text-align: center;
+        border-bottom: 5px solid #0056b3;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+
+      /* Section Titles */
+      .section-title {
+        margin: 50px 0 30px;
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Skills Section */
+      .skill-category {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      #skills ul li {
+        font-size: 1rem;
+        color: #555;
+        padding: 5px 0;
+        line-height: 1.6;
+      }
+
+      #skills .row {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      #skills .col-md-3 {
+        flex: 1;
+        min-width: 250px;
+        margin-bottom: 30px;
+        padding: 15px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      #skills .col-md-3:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Card Image Styling */
+      .project-card img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .project-card img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Button Styling */
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        padding: 12px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-5px);
+      }
+
+      /* Form Styling */
+      .form-floating {
+        margin-bottom: 20px;
+      }
+
+      .form-floating input,
+      .form-floating textarea {
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 15px;
+        font-size: 1rem;
+        width: 100%;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-floating input:focus,
+      .form-floating textarea:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      .form-floating label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+      }
+
+      /* Footer Section */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 30px 0;
+        text-align: center;
+      }
+
+      footer p {
+        font-size: 1rem;
+        margin: 0;
+      }
+
+       /* Navbar Styling */
+  .navbar {
+    background-color: #343a40;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-right: 20px;
+    padding: 8px 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar a:hover {
+    color: #007bff;
+    transform: translateY(-3px);
+  }
+
+  .navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar .navbar-brand:hover {
+    color: #007bff;
+    transform: translateY(-3px);
+  }
+
+  /* Responsive Navbar Toggle */
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #fff;
+  }
+
+  /* Navbar Menu */
+  .navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 20px;
+  }
+
+  .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
+
+  /* Navbar Collapse (Mobile) */
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+
+  /* Navbar on Scroll - Changes color */
+  .navbar.scrolled {
+    background-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+
+    .navbar-nav .nav-item:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .social-icon{
+    text-decoration: none;
+  }
+    </style>
+  </head>
+
+  <body class="container">
+    <!-- Header -->
+    <header>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">Prashantvhkm</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Hi, I'm Prashant Vishwakarma</h1>
+
+        <p class="tagline">
+          Aspiring Software Developer | Full Stack Developer | Web Enthusiast
+        </p>
+        <p>Explore my projects and learn more about me.</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I am a passionate software developer currently pursuing my TY B.Sc. in
+        Computer Science at Thakur College of Science & Commerce (TCSC). My
+        interest in <b>Computer Science</b> drives me to explore various areas
+        such as <b>Java</b>, <b>Python</b>, and web development. I specialize in
+        building dynamic web applications using modern frontend technologies
+        like <b> Tailwind CSS</b>. Outside of programming, I enjoy
+        <b> photography</b>, capturing moments and exploring the world through
+        the lens. I am constantly learning and evolving my skills, eager to
+        contribute to innovative projects and the ever-growing field of CS.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img
+              src="pic1.png"
+              class="card-img-top"
+              alt="Project 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Event Management System</h5>
+              <p class="card-text">
+                A web-based application to simplify event organization and
+                ticketing.
+              </p>
+              <a href="https://github.com/prashantvhkm/event_management" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img
+              src="pic5.png"
+              class="card-img-top"
+              alt="Project 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Portfolio Website</h5>
+              <p class="card-text">
+                A personal portfolio showcasing my projects and skills.
+              </p>
+              <a href="https://github.com/prashantvhkm/portfolio" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img
+              src="https://via.placeholder.com/300"
+              class="card-img-top"
+              alt="Project 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Blog Platform</h5>
+              <p class="card-text">
+                A blogging platform with user authentication and rich text
+                editing.
+              </p>
+              <a href="#" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="container">
+      <h2 class="section-title text-center">Skills</h2>
+      <div class="row text-center">
+        <!-- Programming Languages -->
+        <div class="col-md-3 mb-4">
+          <h5 class="skill-category">Programming Languages</h5>
+          <ul class="list-unstyled">
+            <li>Java</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+
+        <!-- Frontend -->
+        <div class="col-md-3 mb-4">
+          <h5 class="skill-category">Frontend</h5>
+          <ul class="list-unstyled">
+            <li>Bootstrap</li>
+            <li>Tailwind CSS</li>
+          </ul>
+        </div>
+
+        <!-- Backend & Databases -->
+        <div class="col-md-3 mb-4">
+          <h5 class="skill-category">Backend & Databases</h5>
+          <ul class="list-unstyled">
+            <li>Node.js</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+
+        <!-- Hobbies -->
+        <div class="col-md-3 mb-4">
+          <h5 class="skill-category">Hobbies</h5>
+          <ul class="list-unstyled">
+            <li>Photography</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container">
+      <h2 class="section-title">My Photography</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img
+          src="pic2.png" 
+          alt="Photography"
+            class="img-fluid shadow-lg"
+            style="max-width: 100%; height: auto; border: 5px solid #fff"
+          />
+        </div>
+        <div class="col-md-4">
+          <img
+          src="pic3.png" 
+          alt="Photography"
+            class="img-fluid shadow-lg"
+            style="max-width: 100%; height: auto; border: 5px solid #fff"
+          />
+        </div>
+        <div class="col-md-4">
+          <img
+          src="pic4.png" 
+          alt="Photography"
+            class="img-fluid shadow-lg"
+            style="max-width: 100%; height: auto; border: 5px solid #fff"
+          />
+        </div>
+        <!-- You can add more images here for your photography gallery -->
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2 class="section-title">Contact</h2>
+
+      <form>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+          />
+          <label for="name">Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            placeholder="Your Email"
+          />
+          <label for="email">Email</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea
+            class="form-control"
+            id="message"
+            rows="3"
+            placeholder="Your Message"
+          ></textarea>
+          <label for="message">Message</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+
+      <!-- Social Media Links -->
+      <section id="connect" class="container">
+  <h2 class="section-title">Connect with Me</h2>
+  <div class="social-links text-center">
+    <a href="https://github.com/prashantvhkm" target="_blank" class="social-icon github">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://www.instagram.com/prashantvhkm" target="_blank" class="social-icon instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+  </div>
+</section>
+
+<!-- Add Font Awesome for Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-light">
+      <p>&copy; 2025 Prashant Vishwakarma. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Scroll Effect Script -->
+<script>
+  window.onscroll = function() {
+    var navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  };
+</script>
+    <!-- Font Awesome CDN for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>
